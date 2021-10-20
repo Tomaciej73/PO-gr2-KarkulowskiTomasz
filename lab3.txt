@@ -21,10 +21,10 @@ public class Main {
 
             int[] tab = new int[n];
 
-            for(int i=0; i<n; i++) {                //tworzenie randomowych liczb
+            for(int i=0; i<n; i++) {                
 
                 int ran = r.nextInt(max-min)+min;
-                tab[i] = ran;                          //wstawianie do tablicy
+                tab[i] = ran;                         
 
             }
 
