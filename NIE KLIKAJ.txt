@@ -1,1 +1,36 @@
-Kacper kocha Some
+package com.company;
+public class Main {
+
+    public static String modify(String str){
+
+
+        StringBuffer wynik = new StringBuffer();
+        StringBuffer cut = new StringBuffer();
+        char znak;
+        String rezultat;
+
+        if(str.length()%2==0)
+        {
+            int polowka = ((str.length() / 2)-1);
+            znak = str.charAt(polowka);
+            wynik = cut.append(znak);
+            znak = str.charAt(polowka+1);
+            wynik = cut.append(znak);
+
+            rezultat = wynik.toString();
+        }
+        else
+        {
+            int polowka2 = ((str.length()-1) / 2);
+            znak = str.charAt(polowka2);
+            wynik = cut.append(znak);
+            rezultat = wynik.toString();
+        }
+
+        return rezultat.toUpperCase();
+    }
+    public static void main(String[] args) {
+        System.out.println(modify("middle"));
+
+    }
+}
