@@ -1,5 +1,5 @@
 package com.company;
-import pl.imiajd.lakiert.*;
+import pl.imiajd.karkulowski*;
 
 public class Main {
 
