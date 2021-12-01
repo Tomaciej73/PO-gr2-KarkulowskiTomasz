@@ -1,17 +1,24 @@
-tutaj musisz dorobic kod do tego array bo mi bledy wywala
-public void usunPowtorzenia(){
- 
-for(int i=0;i<getRozmiar(); i++){
-     
-    for(int j=1; j<getRozmiar(); j++){
-         
-        if(i!=j && lista.get(i)==lista.get(j)){
-             
-            lista.remove(j);
-            setRozmiar(lista.size());
+package com.company;
+public class Main {
+
+    public static void merge(int[] a, int[] b) {
+        List<a> lista1 = new ArrayList<a>();
+        List<b> lista2 = new ArrayList<b>();
+        for (int i = 0; i < lista1; i++) {
+
+            for (int j = 1; j < lista2; j++) {
+
+                if (i != j && a.get(i) == b.get(j)) {
+
+                    lista1.remove(i);
+                    lista2.remove(j);
+                    setRozmiar(lista1.size() && lista2.size());
+                }
+
+            }
         }
-         
     }
-}
-     
+        public static void main (String[]args){
+
+        }
 }
