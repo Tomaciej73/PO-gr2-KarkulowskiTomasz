@@ -1,0 +1,17 @@
+tutaj musisz dorobic kod do tego array bo mi bledy wywala
+public void usunPowtorzenia(){
+ 
+for(int i=0;i<getRozmiar(); i++){
+     
+    for(int j=1; j<getRozmiar(); j++){
+         
+        if(i!=j && lista.get(i)==lista.get(j)){
+             
+            lista.remove(j);
+            setRozmiar(lista.size());
+        }
+         
+    }
+}
+     
+}
