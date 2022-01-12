@@ -1,0 +1,50 @@
+public class Test {
+    public Test() {
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Osoba> listaOsob = new ArrayList(5);
+        listaOsob.add(new Osoba("Maniek", LocalDate.of(1969, 12, 2)));
+        listaOsob.add(new Osoba("Koles", LocalDate.of(1969, 12, 2)));
+        listaOsob.add(new Osoba("Kowalski", LocalDate.of(1999, 2, 8)));
+        listaOsob.add(new Osoba("Cienki", LocalDate.of(1999, 2, 8)));
+        listaOsob.add(new Osoba("Kowalski", LocalDate.of(1999, 12, 1)));
+        System.out.println(listaOsob.get(0));
+        System.out.println(((Osoba)listaOsob.get(0)).equals(listaOsob.get(1)));
+        System.out.println(((Osoba)listaOsob.get(0)).equals(listaOsob.get(4)));
+        System.out.println(listaOsob);
+        Collections.sort(listaOsob);
+        System.out.println(listaOsob);
+        ArrayList<Osoba> listaStudentow = new ArrayList(5);
+        listaStudentow.add(new Student("GKowalski", LocalDate.of(1969, 12, 2), 3.09D));
+        listaStudentow.add(new Student("Kowalski", LocalDate.of(1969, 12, 2), 4.76D));
+        listaStudentow.add(new Student("Pok", LocalDate.of(1999, 2, 8), 4.0D));
+        listaStudentow.add(new Student("Kox", LocalDate.of(1999, 2, 8), 5.0D));
+        listaStudentow.add(new Student("Maniek", LocalDate.of(1999, 12, 1), 3.89D));
+        System.out.println(listaStudentow);
+        Collections.sort(listaStudentow);
+        System.out.println(listaStudentow);
+        if (args.length != 0) {
+            ArrayList zad3 = new ArrayList();
+
+            try {
+                File mojPlik = new File(args[0]);
+                Scanner zczytywanie = new Scanner(mojPlik);
+
+                while(zczytywanie.hasNextLine()) {
+                    zad3.add(zczytywanie.nextLine());
+                }
+
+                zczytywanie.close();
+            } catch (FileNotFoundException var6) {
+                System.out.println("Brak takiego pliku");
+                var6.printStackTrace();
+            }
+
+            System.out.println(zad3);
+            Collections.sort(zad3);
+            System.out.println(zad3);
+        }
+
+    }
+}
