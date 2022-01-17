@@ -1,0 +1,29 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.time.LocalDate;
+
+public class Pracownik extends Osoba {
+    private double pobory;
+    private LocalDate DataZatrudnienia;
+
+    public Pracownik(String nazwisko, String[] imi, LocalDate DU, boolean gender, double pobory, LocalDate DZ) {
+        super(nazwisko, imi, DU, gender);
+        this.pobory = pobory;
+        this.DataZatrudnienia = DZ;
+    }
+
+    public double getPobory() {
+        return this.pobory;
+    }
+
+    public LocalDate getDataZatrudnienia() {
+        return this.DataZatrudnienia;
+    }
+
+    public String getOpis() {
+        return String.format("pracownik zatrudniony %s z pensją %.2f zł", this.DataZatrudnienia.toString(), this.pobory);
+    }
+}

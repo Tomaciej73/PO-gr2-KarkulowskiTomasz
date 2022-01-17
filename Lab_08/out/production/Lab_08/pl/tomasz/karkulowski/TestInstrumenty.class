@@ -1,0 +1,36 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class TestInstrumenty {
+    public TestInstrumenty() {
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Instrument> orkiestra = new ArrayList();
+        orkiestra.add(new Fortepian("Yamaha", LocalDate.of(1980, 2, 20)));
+        orkiestra.add(new Skrzypce("Stratovarius", LocalDate.of(1580, 6, 27)));
+        orkiestra.add(new Skrzypce("Stratovarius", LocalDate.of(1580, 6, 27)));
+        orkiestra.add(new Flet("Krecik", LocalDate.of(2020, 5, 10)));
+        orkiestra.add(new Fortepian("Schubert", LocalDate.of(2018, 2, 8)));
+        Iterator var2 = orkiestra.iterator();
+
+        while(var2.hasNext()) {
+            Instrument ins = (Instrument)var2.next();
+            System.out.print(ins.dzwiek() + " ");
+            System.out.println(ins);
+        }
+
+        System.out.println(((Instrument)orkiestra.get(0)).equals(orkiestra.get(4)));
+        System.out.println(((Instrument)orkiestra.get(1)).equals(orkiestra.get(2)));
+        System.out.println(((Instrument)orkiestra.get(3)).getProducent());
+        System.out.println(((Instrument)orkiestra.get(3)).getRokProdukcji());
+    }
+}

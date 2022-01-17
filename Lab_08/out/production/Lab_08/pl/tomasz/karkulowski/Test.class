@@ -1,0 +1,40 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+
+import java.io.PrintStream;
+import java.time.LocalDate;
+
+public class Test {
+    public Test() {
+    }
+
+    public static void main(String[] args) {
+        Osoba[] ludzie = new Osoba[]{new Pracownik("Kowalski", new String[]{"Jan"}, LocalDate.of(1999, 2, 8), false, 50000.0D, LocalDate.of(2010, 1, 1)), new Student("Nowak", new String[]{"Małgorzata", "Anna"}, LocalDate.of(1990, 8, 12), true, "informatyka", 4.5D)};
+        Osoba[] var2 = ludzie;
+        int var3 = ludzie.length;
+
+        for(int var4 = 0; var4 < var3; ++var4) {
+            Osoba p = var2[var4];
+            String[] var6 = p.getImiona();
+            int var7 = var6.length;
+
+            for(int var8 = 0; var8 < var7; ++var8) {
+                String i = var6[var8];
+                System.out.print(i + " ");
+            }
+
+            PrintStream var10000 = System.out;
+            String var10001 = p.getNazwisko();
+            var10000.print(var10001 + ": " + p.getOpis() + " uordzony: " + p.getDataUrodzenia() + ", plec: ");
+            if (p.isPlec()) {
+                System.out.println("Kobieta");
+            } else {
+                System.out.println("Mężczyzna");
+            }
+        }
+
+    }
+}

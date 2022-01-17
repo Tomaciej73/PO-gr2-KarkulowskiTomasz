@@ -1,0 +1,56 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+
+public class Adres {
+    private String ulica;
+    private String numer_domu;
+    private String numer_mieszkania = "";
+    private String miasto;
+    private String kod_pocztowy;
+
+    public Adres(String ulica, String numer_domu, String kod_pocztowy, String miasto) {
+        this.ulica = ulica;
+        this.numer_domu = numer_domu;
+        this.kod_pocztowy = kod_pocztowy;
+        this.miasto = miasto;
+    }
+
+    public Adres(String ulica, String numer_domu, String numer_mieszkania, String kod_pocztowy, String miasto) {
+        this.ulica = ulica;
+        this.numer_domu = numer_domu;
+        this.numer_mieszkania = numer_mieszkania;
+        this.kod_pocztowy = kod_pocztowy;
+        this.miasto = miasto;
+    }
+
+    public void pokaz() {
+        System.out.println(this.kod_pocztowy + " " + this.miasto);
+        System.out.print(this.ulica + " " + this.numer_domu);
+        if (!this.numer_mieszkania.equals("")) {
+            System.out.print("/" + this.numer_mieszkania);
+        }
+
+        System.out.println();
+    }
+
+    public boolean przed(Adres kodzik) {
+        int[] tab = new int[]{0, 1, 3, 4, 5};
+        StringBuilder first = new StringBuilder();
+        StringBuilder kod = new StringBuilder();
+        int[] var5 = tab;
+        int k = tab.length;
+
+        for(int var7 = 0; var7 < k; ++var7) {
+            int i = var5[var7];
+            first.append(kodzik.kod_pocztowy.charAt(i));
+            kod.append(this.kod_pocztowy.charAt(i));
+        }
+
+        int f = Integer.parseInt(first.toString());
+        k = Integer.parseInt(kod.toString());
+        return f < k;
+    }
+}

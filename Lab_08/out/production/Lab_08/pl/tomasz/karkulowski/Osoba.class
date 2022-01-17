@@ -1,0 +1,40 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+
+
+import java.time.LocalDate;
+
+public abstract class Osoba {
+    private String nazwisko;
+    private String[] imiona;
+    private LocalDate DataUrodzenia;
+    private boolean plec;
+
+    public Osoba(String nazwisko, String[] imi, LocalDate DU, boolean gender) {
+        this.nazwisko = nazwisko;
+        this.imiona = imi;
+        this.DataUrodzenia = DU;
+        this.plec = gender;
+    }
+
+    public abstract String getOpis();
+
+    public String getNazwisko() {
+        return this.nazwisko;
+    }
+
+    public String[] getImiona() {
+        return this.imiona;
+    }
+
+    public LocalDate getDataUrodzenia() {
+        return this.DataUrodzenia;
+    }
+
+    public boolean isPlec() {
+        return this.plec;
+    }
+}

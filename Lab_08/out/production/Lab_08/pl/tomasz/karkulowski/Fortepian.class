@@ -1,0 +1,35 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.time.LocalDate;
+
+public abstract class Instrument {
+    private String producent;
+    private LocalDate rokProdukcji;
+
+    public Instrument(String prod, LocalDate rP) {
+        this.producent = prod;
+        this.rokProdukcji = rP;
+    }
+
+    public abstract String dzwiek();
+
+    public String getProducent() {
+        return this.producent;
+    }
+
+    public LocalDate getRokProdukcji() {
+        return this.rokProdukcji;
+    }
+
+    public boolean equals(Object obj) {
+        return this.toString().equals(obj.toString());
+    }
+
+    public String toString() {
+        String var10000 = this.getClass().getSimpleName();
+        return var10000 + ", producent: " + this.producent + ", data produkcji: " + this.rokProdukcji;
+    }
+}
