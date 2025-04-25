@@ -117,6 +117,7 @@ public class Main {
 //
 //        randomowe(y);
         System.out.println(modify("middle"));
+        System.out.println(modify("OK"));
 
     }
 }
